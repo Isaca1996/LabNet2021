@@ -30,7 +30,7 @@ namespace TP1_Ejercicio_POO
 
         public override string Detenerse()
         {
-            return $"El automovil se detiene a un lado de la calle y los {GetPasajeros()} pasajeros se bajan.";
+            return $"El automovil con patente {GetPatente()} se detiene a un lado de la calle y los {GetPasajeros()} pasajeros se bajan.";
         }
     }
 }

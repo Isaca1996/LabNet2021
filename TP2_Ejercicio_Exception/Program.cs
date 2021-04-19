@@ -13,7 +13,7 @@ namespace TP2_Ejercicio_Exception
 
 
             //Consigna 1. Ir a EjerciciosTests.cs para ver está con Unit Test
-            Ejercicios.Operacion(35, 5);
+            DivisionExtension.division(35, 0);
 
 
             //Consigna 2. Ir a EjerciciosTests.cs para ver está con Unit Test

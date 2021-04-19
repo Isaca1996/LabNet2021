@@ -19,7 +19,7 @@ namespace TP2_Ejercicio_Exception.Exceptions.Tests
             int num2 = 0;
 
             //Act
-            Ejercicios.division(num1, num2);
+            DivisionExtension.division(num1, num2);
 
         }
 
@@ -33,7 +33,7 @@ namespace TP2_Ejercicio_Exception.Exceptions.Tests
             int num1 = 20;
 
             //Act
-            Ejercicios.Operacion(num1, null);
+            DivisionExtension.division(num1, null);
 
         }
     }

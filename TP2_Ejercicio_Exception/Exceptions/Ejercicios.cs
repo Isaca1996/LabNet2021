@@ -7,10 +7,6 @@ namespace TP2_Ejercicio_Exception.Exceptions
 {
     public class Ejercicios
     {
-        public static void division(int? num1, int? num2)
-        {
-            int dividir = num1.Value / num2.Value;
-        }
 
         public static void Operacion(int? num1, int? num2)
         {

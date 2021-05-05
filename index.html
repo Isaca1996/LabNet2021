@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="estilos/estilos.css">
+
+
+
+    <!-- Etiqueta style -->
+    <style>
+        .edad {
+            width: 25%;
+        }
+
+        .correo,
+        .nombre,
+        .apellido {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="container m-5">
+            <h1>Contacto</h1>
+            <hr class="linea">
+            <h2 class="m-3">Completa tus datos</h2>
+            <form method="GET" action="index.html" style="width: 85%;" enctype="multipart/form-data"
+                class="form-horizontal mt-5 ml-3 p-3">
+                <fieldset>
+                    <h3 class="mt-3 mb-3">Información personal</h3>
+                    <hr class="linea">
+                    <div class="form-row mover-izq">
+                        <div class="col">
+                            <label for="nombre">Nombre:</label>
+                            <br>
+                            <input id="nombre" type="text" minlength="3" placeholder="Nombre" name="nombre"/>
+                            <br>
+                            <span id="span-nombre" class="ml-2 mt-3"></span>
+                        </div>
+                        <div class="col closer">
+                            <label for="apellido">Apellido:</label>
+                            <br>
+                            <input id="apellido" type="text" minlength="3" placeholder="Apellido" name="apellido"/>
+                            <br>
+                            <span id="span-apellido" class="ml-2 mt-3"></span>
+                        </div>
+                    </div>
+                    <div class="form-row mt-3 mover-izq">
+                        <div class="col">
+                            <label for="edad">Edad:</label>
+                            <br>
+                            <input id="edad" type="tel" class="edad" placeholder="Edad" name="edad" maxlength="3"/>
+                        </div>
+                        <div class="col closer">
+                            <label for="email">Correo:</label>
+                            <br>
+                            <input type="email" class="correo" placeholder="Correo@correo.com" name="correo" />
+                        </div>
+                    </div>
+                    <div class="form-row mt-4 mover-izq">
+                        <div class="col genero">
+                            <legend>Género</legend>
+                            <div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="genero" id="generoMasculino"
+                                        value="generoMasculino">
+                                    <label class="form-check-label" for="generoMasculino">
+                                        Masculino
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="genero" id="generoFemenino"
+                                        value="generoFemenino">
+                                    <label class="form-check-label" for="generoFemenino">
+                                        Femenino
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="genero" id="NoEspecificado"
+                                        value="NoEspecificado">
+                                    <label class="form-check-label" for="NoEspecificado">
+                                        No específica
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="mt-5 mb-3">Información adicional</h3>
+                    <hr class="linea">
+                    <div class="form-row mover-izq">
+                        <div class="col">
+                            <label for="empresa">Empresa:</label>
+                            <br>
+                            <input type="text" placeholder="Empresa" name="empresa" />
+                        </div>
+                        <div class="col closer">
+                            <label for="cargo">Cargo:</label>
+                            <br>
+                            <input type="text" placeholder="Cargo" name="cargo" />
+                        </div>
+                    </div>
+                    <div class="form-row mt-3 mover-izq">
+                        <div class="col">
+                            <label for="tiempo">Tiempo:</label>
+                            <br>
+                            <input type="text" placeholder="Tiempo" name="tiempo">
+                        </div>
+                    </div>
+                    <div class="botones">
+                        <button class="btn boton borrar" id="borrar" type="submit" name="borrar">Borrar</button>
+                        <button class="btn boton enviar" id="enviar" type="submit" name="enviar">Enviar</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <!-- jQuery -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/scripts.js"></script>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+/*_____-----LAYOUT-----_____*/
+
+.enviar {
+  margin-top: 50px;
+  margin-left: 100px;
+}
+
+.borrar {
+    margin-top: 50px;
+    margin-left: 300px;
+}
+
+.closer {
+  margin-right: 150px;
+}
+
+.mover-izq {
+    margin-left: 150px;
+}
+
+.botones {
+    align-content: center;
+}
+
+/*_____-----SKIN-----_____*/
+
+.linea {
+  color: #a80000 !important;
+  border-top: 2px solid !important;
+}
+
+form {
+    background-color: #FE7A5E;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #581845;
+}
+
+.genero label, span {
+    color: #DAF7A6;
+}
+
+::placeholder {
+    font-weight: bold;
+    font-style: italic;
+}
+
+input {
+    border: none!important;
+    padding: 5px 15px;
+    border-radius: 40px 10px!important;
+}
+
+.boton {
+    border: none;
+    border-radius: 40px 40px!important;
+    background-color: #581845;
+    color: #DAF7A6;
+}
+
+
+/*_____-----PSEUDOCLASES-----_____*/
+
+.boton:hover, input:hover {
+    box-shadow: 0px -1px 5px rgba(199, 0, 57, 0.487), 0px -5px 20px rgb(0, 0, 0);
+}
+
+.boton:hover {
+    color: #FF5733 ;
+}
+
+.boton:active {
+    background-color: rgba(88, 24, 69, 0.3);
+}
+

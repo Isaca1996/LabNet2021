@@ -1,0 +1,154 @@
+﻿@model TP7_Ejercicio_MVC.MVC.Models.CustomersViews
+
+@{
+    ViewBag.Title = "Customer Page";
+}
+
+<style>
+
+    .separador1 {
+        margin-bottom: 25px;
+    }
+
+    .separador2 {
+        margin-top: 25px;
+    }
+
+    .separador3 {
+        margin-left: 25px;
+    }
+
+    .letras label, .letras p {
+        font-style: italic;
+    }
+
+    .falta {
+        border: 1px solid red !important;
+    }
+
+    .listo {
+        border: 1px solid green !important;
+    }
+
+    .ancho {
+        width: 250px;
+    }
+
+    .linea {
+        color: #a80000 !important;
+        border-top: 2px solid !important;
+        margin-left: -2px;
+        width: 85%;
+    }
+
+    .separadorG {
+        margin-left: 230px;
+    }
+
+    .letra a {
+        color: white !important;
+    }
+</style>
+
+@using (Html.BeginForm("Update", "Customers", FormMethod.Post, new { id = "form" }))
+{
+    <div class="container letras">
+        <h1 class="separador1">Actualizar cliente.</h1>
+        <hr class="linea" />
+        <p class="separador1 separador2">Debe llenar todos los campos para poder actualizar la información. Si no va a cambiar algo, solo coloque lo que estaba antes.</p>
+        <div class="row separador3">
+            <div class="col-lg-4">
+                <label for="ID">Escribir ID a cambiar: </label> <br />
+                @Html.TextBoxFor(i => i.CustomerID, htmlAttributes: new { id = "Id" })
+            </div>
+            <div class="col-lg-8">
+                <label for="contacto">Nombre y apellido: </label> <br />
+                @Html.TextBoxFor(n => n.ContactName, htmlAttributes: new { id = "Contacto", @class = "ancho" })
+            </div>
+        </div>
+        <div class="row separador3 separador2">
+            <div class="col-lg-4">
+                <label for="cargo">Cargo: </label> <br />
+                @Html.TextBoxFor(c => c.ContactTitle, htmlAttributes: new { id = "Cargo" })
+            </div>
+            <div class="col-lg-8">
+                <label for="Empresa">Empresa: </label> <br />
+                @Html.TextBoxFor(e => e.CompanyName, htmlAttributes: new { id = "Empresa", @class = "ancho" })
+            </div>
+        </div>
+        <div class="row separador3">
+            <div class="col-lg-4 separador1 separador2">
+                <label for="celular">Celular: </label> <br />
+                @Html.TextBoxFor(ce => ce.Phone, htmlAttributes: new { id = "Celular" })
+            </div>
+        </div>
+        <div class="separadorG">
+            <br />
+            <button class="btn btn-warning letra" name="volver">@Html.ActionLink("Volver", "Back")</button>
+            <input type="submit" class="btn btn-success separador3" id="Cambiar" value="Cambiar" onclick="return confirm('¿Ha revisado los cambios?')" />
+        </div>
+    </div>
+}
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $("#Celular").keypress(function (c) {
+            var keyCode = c.which;
+            if ((keyCode != 8 || keyCode == 32) && (keyCode < 48 || keyCode > 57)) {
+                return false;
+            }
+        });
+
+        $('#form').submit(function () {
+            if ($.trim($("#Id").val()) === "" || $.trim($("#Contacto").val()) === "" || $.trim($("#Cargo").val()) === "" || $.trim($("#Empresa").val()) === "" || $.trim($("#Celular").val()) === "") {
+                alert('No ha llenado todos los campos, por favor revise y vuelva a intentar.');
+                return false;
+            }
+        });
+
+        $("#Id").blur(function () {
+            if (!$(this).val() != '') {
+                $(this).addClass("falta");
+            } else {
+                $(this).addClass("listo");
+            }
+        });
+
+        $("#Contacto").blur(function () {
+            if (!$(this).val() != '') {
+                $(this).addClass("falta");
+            } else {
+                $(this).addClass("listo");
+            }
+        });
+
+        $("#Cargo").blur(function () {
+            if (!$(this).val() != '') {
+                $(this).addClass("falta");
+            } else {
+                $(this).addClass("listo");
+            }
+        });
+
+        $("#Empresa").blur(function () {
+            if (!$(this).val() != '') {
+                $(this).addClass("falta");
+            } else {
+                $(this).addClass("listo");
+            }
+        });
+
+        $("#Celular").blur(function () {
+            if (!$(this).val() != '') {
+                $(this).addClass("falta");
+            } else {
+                $(this).addClass("listo");
+            }
+        });
+
+    });
+
+</script>

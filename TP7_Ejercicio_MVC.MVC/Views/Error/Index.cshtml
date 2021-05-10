@@ -1,0 +1,38 @@
+﻿@model TP7_Ejercicio_MVC.MVC.Models.CustomersViews
+
+@{
+    ViewBag.Title = "Customer Page";
+}
+
+<style>
+
+    .separador1 {
+        margin-bottom: 25px;
+    }
+
+    .separador2 {
+        margin-top: 25px;
+    }
+
+    .separador3 {
+        margin-left: 25px;
+    }
+
+    .letra a {
+        color: white!important;
+    }
+
+    p {
+        font-style: italic;
+    }
+
+</style>
+
+
+<h1 class="separador1 separador2">Error.</h1>
+
+<p class="separador3 separador1">Se ha producido un error, por favor vuelva a la página principal.</p>
+
+
+
+<button class="btn btn-primary letra">@Html.ActionLink("Volver", "Back") </button>

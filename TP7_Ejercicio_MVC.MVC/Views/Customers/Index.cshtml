@@ -1,0 +1,96 @@
+﻿@model List<TP7_Ejercicio_MVC.MVC.Models.CustomersViews>
+
+@{
+    ViewBag.Title = "Customer Page";
+}
+
+<style>
+
+    .separador1 {
+        margin-bottom: 25px;
+    }
+
+    .separador2 {
+        margin-top: 25px;
+    }
+
+    .separador3 {
+        margin-left: 25px;
+    }
+
+    .separadorE {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .separadorG {
+        margin-left: 350px;
+    }
+
+    p {
+        font-style: italic;
+    }
+
+    .letra a {
+        color: white!important;
+    }
+
+    .linea {
+        color: #a80000 !important;
+        border-top: 2px solid !important;
+    }
+
+</style>
+
+<h1 class="separador2 separador1">Bienvenido.</h1>
+
+<hr class="linea"/>
+
+<p class="separador3 separador1">Acá podrá encontrar la información de nuestros clientes.</p>
+
+<div class="row separadorG">
+    <div class="col-lg-4">
+        <button type="button" class="btn btn-success letra">
+            @Html.ActionLink("Nuevo cliente", "Insert")
+        </button>
+    </div>
+
+    <div class="col-lg-4">
+        <button type="button" class="btn btn-info letra">
+            @Html.ActionLink("Cambiar cliente", "Update")
+        </button>
+    </div>
+</div>
+
+<div class="container separador2">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Cargo</th>
+                <th scope="col">Empresa</th>
+                <th scope="col">Celular</th>
+                <th scope="col">Borrar</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var customers in Model)
+            {
+                <tr>
+                    <th scope="row">@customers.CustomerID</th>
+                    <td>@customers.ContactName</td>
+                    <td>@customers.ContactTitle</td>
+                    <td>@customers.CompanyName</td>
+                    <td>@customers.Phone</td>
+                    <td class="btn btn-danger btn-sm letra separadorE">@Html.ActionLink("Borrar", "Delete", new { CustomerID = customers.CustomerID }, new { onclick = "return confirm('¿Está seguro de borrar esto?')" })</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+
+
+

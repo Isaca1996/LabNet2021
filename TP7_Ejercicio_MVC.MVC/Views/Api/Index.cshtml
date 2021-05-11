@@ -1,0 +1,75 @@
+﻿@model List<TP7_Ejercicio_MVC.MVC.Models.ApiViews>
+
+@{
+    ViewBag.Title = "Api Page";
+}
+
+<style>
+
+    .separador1 {
+        margin-bottom: 25px;
+    }
+
+    .separador2 {
+        margin-top: 25px;
+    }
+
+    .separador3 {
+        margin-left: 25px;
+    }
+
+    .separadorE {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .separadorG {
+        margin-left: 500px;
+    }
+
+    .letra a {
+        color: white !important;
+    }
+
+    .linea {
+        color: #a80000 !important;
+        border-top: 2px solid !important;
+    }
+</style>
+
+<div class="container">
+    <h1 class="separador2">Gatos para alegrar su día.</h1>
+    <hr class="linea" />
+    <button class="btn btn-success separadorG separador1 letra">@Html.ActionLink("Otra imagen", "New")</button>
+    <div id="gatos" class="separador2"></div>
+</div>
+
+
+@section scripts
+
+{
+    
+<script>
+
+    $(function () {
+        $.ajax(
+            {
+                type: "GET",
+                url: "https://api.thecatapi.com/v1/images/search",
+                beforeSend: function (request) {
+                    request.setRequestHeader("Content-Type","application/json")
+                },
+                success: function (data) {
+                    var gato = [];
+                    $.each(data, function (key, val) {
+                        gato.push('<img src = "' + val.url + '" width="100%" />');
+                    });
+                    $('#gatos').append(gato.join(''));
+                }
+            });
+    });
+
+</script>    
+
+}
+ 

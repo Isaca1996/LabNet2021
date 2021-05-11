@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP4_Ejercico_EF.Entities", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP7_Ejercicio_MVC.MVC", "TP7_Ejercicio_MVC.MVC\TP7_Ejercicio_MVC.MVC.csproj", "{5B4223F9-00D6-46C4-82E5-E0ACF1A6F2FF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP8_Ejercicio_API", "TP8_Ejercicio_API\TP8_Ejercicio_API.csproj", "{C47E9B59-3827-47F5-A56B-2BC4E8F418F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{5B4223F9-00D6-46C4-82E5-E0ACF1A6F2FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B4223F9-00D6-46C4-82E5-E0ACF1A6F2FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B4223F9-00D6-46C4-82E5-E0ACF1A6F2FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C47E9B59-3827-47F5-A56B-2BC4E8F418F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C47E9B59-3827-47F5-A56B-2BC4E8F418F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C47E9B59-3827-47F5-A56B-2BC4E8F418F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C47E9B59-3827-47F5-A56B-2BC4E8F418F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

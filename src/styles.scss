@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.separador-izq { 
+    padding-left: 25px;
+}
+
+.separador-der {
+    margin-right: 25px;
+}
+
+.sep-der-inp {
+    margin-right: 15px;
+}
+
+.separador-ab {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+}

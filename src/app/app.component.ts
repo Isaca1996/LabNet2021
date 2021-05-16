@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ng-demo-capa';
+
+  title = 'Capacitacion Angular';
+  numero = 1;
+  mostrar = true;
+  frase: any = {
+    mensaje: '¡El Doc está vivo!',
+    autor: 'Marty'
+  }
+
+  personajes: string[] = ['Marty', 'Doc', 'Biff'];
+
 }
